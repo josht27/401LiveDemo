@@ -1,0 +1,320 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<!--PUT RESUME PICTURE HERE WHEN YOU HAVE SERVICE-->
+<img src="~/Content/Images/fake_resume.jpg" />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="panel-group" id="accordion" style="background-color:lightskyblue">
+            <div class="panel panel-default">
+
+
+                <div class="panel-heading" style="background-color:lightskyblue">
+                    <h4 class="panel-title" style="color:white">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="">Comments on Resume</a>
+                    </h4>
+                </div>
+
+
+                <div id="collapse1" class="panel-collapse collapse "> <!--use 'in' after collapse in order to have this open on page load-->
+                    <div class="panel-body">
+                        <ul>
+                            <li>Comment Made By: Matthew Dembinski - HR Manager on 11/17/17 </li>
+                            <ul>
+                                <li>
+                                    I really like his 3 bullet point on Education, have them expound on that in the first interview, please.
+                                </li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>Comment Made By: Lindsay Irwin - Lead Software Developer on 11/17/17 </li>
+                            <ul>
+                                <li>
+                                    He smells funny...
+                                </li>
+                            </ul>
+                        </ul>
+
+                        <div id="myDIV">
+                            
+                        </div>
+
+                        <input type="text" id="myText" placeholder="Enter Comments Here">
+                        <button onclick="addComment()">Add Comment</button>
+
+
+                
+                        <script>    
+                            function addComment() {
+                                var para = document.createElement("ul");
+                                var para1 = document.createElement("ul"); 
+                                var trial = document.createTextNode('Comment Made By: Matthew Dembinski - HR Manager on 11/17/17')
+                                
+
+
+                                var bullet = document.createElement("li");
+
+                                var bullet1 = document.createElement("li");
+                                var textbox = document.createTextNode(document.getElementById('myText').value);
+                                
+                                para.appendChild(bullet);
+                                bullet.appendChild(trial);
+
+                                para1.appendChild(bullet1);
+
+                                bullet1.appendChild(textbox);
+
+                                document.getElementById("myDIV").appendChild(para).appendChild(para1);
+                            }
+
+                                
+                           
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color:lightskyblue">
+                    <h4 class="panel-title" style="color:white">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">First Round Interview</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <h3>Interviewers:</h3>
+                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matthew Dembinski</h4>
+                            <button onclick="finalRoundInterviewers()">Add Interviewer</button>
+                            <h3>Interview(ed) on: 11/20/17 </h3>
+                            <button onclick="finalRoundInterviewDate()">Interview Date</button>
+                            <li>Qusetions Asked/Questions to Ask</li>
+                            <ul>
+                                <li>
+                                    Why you over the many qualified candidates?
+                                </li>
+                                <button onclick="finalRoundQuestionsAsked()">Add Question</button>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>General Comments</li>
+                            <ul>
+                                <li>
+                                    He smelled funny..
+                                </li>
+                                <button onclick="finalRoundGeneralComments()">Add Comment</button>
+                            </ul>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+           
+            
+            
+            
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color:lightskyblue">
+                    <h4 class="panel-title" style="color:white">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Second Round Interview</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <h3>Interviewers</h3>
+                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matthew Dembinski & Lindsay Irwin </h4>
+                            <button onclick="finalRoundInterviewers()">Add Interviewer</button>
+                            <h3>Interview(ed) on: 11/20/17</h3>
+                            <button onclick="finalRoundInterviewDate()">Interview Date</button>
+                            <li>Qusetions Asked/Questions to Ask</li>
+                            <ul>
+                                <li>
+                                    Why you over the many qualified candidates?
+                                </li>
+                                <button onclick="finalRoundQuestionsAsked()">Add Question</button>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>General Comments</li>
+                            <ul>
+                                <li>
+                                    He smelled funny..
+                                </li>
+                                <button onclick="finalRoundGeneralComments()">Add Comment</button>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           
+            
+            
+            
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color:lightskyblue">
+                    <h4 class="panel-title" style="color:white">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Third Round Interview</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <h3>Interviewers</h3>
+                            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matthew Dembinski & Lindsay Irwin </h4>
+                            <button onclick="finalRoundInterviewers()">Add Interviewer</button>
+                           
+                            <h3>Interview(ed) on: 11/20/17</h3>
+                            <button onclick="finalRoundInterviewDate()">Interview Date</button>
+                          
+                            <li>Qusetions Asked/Questions to Ask</li>
+                            <ul>
+                                <li>
+                                   
+                                    Why you over the many qualified candidates?
+                                </li>
+                                <button onclick="finalRoundQuestionsAsked()">Add Question</button>
+                                
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>General Comments</li>
+                            <ul>
+                                <li>
+                                    
+                                    He smelled funny..
+                                </li>
+                                <button onclick="finalRoundGeneralComments()">Add Comment</button>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+
+
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color:lightskyblue">
+                    <h4 class="panel-title" style="color:white">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Final Round</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <h3>Interviewers</h3>
+                            <h4 id="finalRoundInterviewers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                            <button onclick="finalRoundInterviewers()">Add Interviewer</button>
+                            
+                            <h3 id="finalRoundInterviewDate">Interview(ed) on: </h3>
+                            <button onclick="finalRoundInterviewDate()">Interview Date</button>
+                            
+                            <li>Qusetions Asked/Questions to ask</li>
+                            <ul>
+                                <li id="finalRoundQuestionsAsked">
+                                   
+                                </li>
+                                <button onclick="finalRoundQuestionsAsked()">Add Question</button>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>General Comments</li>
+                            <ul>
+                                <li id="finalRoundGeneralComments">
+                                    
+                                </li>
+                                <button onclick="finalRoundGeneralComments()">Add Comment</button>
+                            </ul>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function finalRoundInterviewers() {
+            var person = prompt("Please enter name of interviewer", "Ronald Weasley?");
+            var counter1 = 0;
+
+
+            if (person != null) {
+                if (sessionStorage.getItem("counter1") === null) {
+
+                    document.getElementById("finalRoundInterviewers").appendChild(document.createTextNode(person));
+                    counter1++;
+                    sessionStorage.setItem("counter1", counter1);
+                    
+                }
+
+                else document.getElementById("finalRoundInterviewers").appendChild(document.createTextNode(' & ' + person));
+            }
+           
+        }
+
+        function finalRoundInterviewDate() {
+            var person = prompt("Please enter date of interview", "XX/XX/XXXX");
+
+
+            if (person != null) {
+                document.getElementById("finalRoundInterviewDate").appendChild(document.createTextNode(person));   
+            }
+
+    
+        }
+
+        function finalRoundQuestionsAsked() {
+            var person = prompt("Please enter your question asked", "How old are you?");
+
+
+            if (person != null) {
+                document.getElementById("finalRoundQuestionsAsked").appendChild(document.createElement("li")).appendChild(document.createTextNode(person));
+            }
+
+        }
+
+        
+        function finalRoundGeneralComments() {
+            var person = prompt("What comments do you have of candidate?", "Great Fit!");
+
+
+            if (person != null) {
+                document.getElementById("finalRoundGeneralComments").appendChild(document.createElement("li")).appendChild(document.createTextNode(person));
+
+            }
+        }
+    </script>   
+
+
+
+</body>
+</html>
